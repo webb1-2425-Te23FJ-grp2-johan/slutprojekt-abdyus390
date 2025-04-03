@@ -1,18 +1,19 @@
+
+
 /* Head */
 
 * {
     box-sizing: border-box;
 }
-head{
-
-}
 .logo{
 
 }
 header{
-
+  display: block;
+  border: thick 3px  seagreen; 
+  border-radius: 4px; 
 }
-nav{
+.menu{
 
 }
 
@@ -20,5 +21,8 @@ nav{
 
 body{
 background-color: darkgray;
+}
+section{
+
 }
 
