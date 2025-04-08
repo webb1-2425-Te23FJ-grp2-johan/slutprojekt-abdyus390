@@ -1,9 +1,19 @@
+:root{
+  font-size: 16px;
+
+  --text-prim: #b6b6b6;
+  --text-sec: #ececec;
+  --bg-prim: #23232e;
+  --bg-sec: #141418;
+}
+
 
 
 /* Head */
 
 * {
     box-sizing: border-box;
+    
 }
 .logo{
 
@@ -12,6 +22,8 @@ header{
   display: block;
   border: thick 3px  seagreen; 
   border-radius: 4px; 
+  background-color: crimson;
+  height: 50px;
 }
 .menu{
 
@@ -20,7 +32,8 @@ header{
 /* Body */
 
 body{
-background-color: darkgray;
+  width: 1200px;
+  background-color: var(--bg-prim);
 }
 section{
 
