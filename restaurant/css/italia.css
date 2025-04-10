@@ -1,0 +1,78 @@
+:root{
+    font-size: 16px;
+  
+    --text-prim: #b6b6b6;
+    --text-sec: #ececec;
+    --bg-prim: #23232e;
+    --bg-sec: #141418;
+  }
+
+
+
+body{
+background-color: var(--text-prim);
+}
+.container{
+    width: 100%;
+    grid-template-areas:
+    "M M M M"
+    "M M M M"
+    "A A P P"
+    "F F F F" ;
+}
+
+article{
+    border: red thick solid;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+}
+section{
+    border: green thick solid;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+}
+
+#menu{
+    grid-area: M;
+    grid-template-areas: 
+    "a a a a"
+    "b b b b"
+    "c c c c"
+    "d d d d"
+    "e e e e";
+}
+.menu-item{
+
+}
+#caesar{
+    grid-area: a;
+}
+#elefantsoppa{
+    grid-area: b;
+}
+#senat{
+    grid-area: c;
+}
+#armenia{
+    grid-area: d;
+}
+#nektar{
+    grid-area: e;
+}
+
+
+#about{
+    grid-area: A;
+}
+
+#partner{
+    grid-area: P;
+}
+
+footer{
+    grid-area: F;
+}

@@ -19,11 +19,7 @@
 
 }
 header{
-  display: block;
-  border: thick 3px  seagreen; 
-  border-radius: 4px; 
-  background-color: crimson;
-  height: 50px;
+  
 }
 .menu{
 
@@ -33,11 +29,21 @@ header{
 
 body{
   width: 1200px;
-  background-color: var(--bg-prim);
+  background-color: var(--text-prim);
 }
 section{
 
 }
+
+#menu{
+
+}
+.menuitem{
+  border: 30px white thick;
+  padding: 40px;
+  margin: 20px;
+}
+
 
 @media  screen and (min-width:400px) {
   
