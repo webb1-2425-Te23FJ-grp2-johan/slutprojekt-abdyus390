@@ -1,35 +1,53 @@
 :root{
-    font-size: 16px;
-  
-    --text-prim: #b6b6b6;
-    --text-sec: #ececec;
-    --bg-prim: #23232e;
-    --bg-sec: #141418;
+    --text-primary: #f5f5dc; 
+    --text-secondary: #a8a878; 
+    --bg-primary: #333333; 
+    --bg-secondary: #555555; 
+    --nyans-gold: #FFD700;
+    --nyans-red: #B80F0A; 
+    --font-primary: 'Trajan Pro', serif; 
+    --font-secondary: 'Times New Roman', serif; 
   }
 
 
 
-body{
-background-color: var(--text-prim);
-}
-.container{
-    width: 100%;
-    grid-template-areas:
-    "M M M M"
-    "M M M M"
-    "A A P P"
-    "F F F F" ;
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-secondary), serif;
+    margin: 0; 
+    padding: 0; 
+  }
+
+.nav{
+grid-area: N;
 }
 
+ 
+   .container {
+    display: grid;
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 20px; 
+    grid-template-areas:
+      "N N N N"
+      "M M M M"
+      "M M M M"
+      "A A P P"
+      "F F F F";
+    gap: 15px;
+   }
+
 article{
-    border: red thick solid;
+    border: black solid thin;
     width: 100%;
     height: 100%;
     display: block;
     margin: 10px;
 }
+
 section{
-    border: green thick solid;
+    border: black solid thin;
     width: 100%;
     height: 100%;
     display: block;
@@ -37,6 +55,7 @@ section{
 }
 
 #menu{
+    display: grid;
     grid-area: M;
     grid-template-areas: 
     "a a a a"
@@ -48,6 +67,9 @@ section{
 .menu-item{
 
 }
+
+
+
 #caesar{
     grid-area: a;
 }
@@ -67,12 +89,29 @@ section{
 
 #about{
     grid-area: A;
+    background: fuchsia;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
 }
 
 #partner{
     grid-area: P;
+    background: darkkhaki;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
 }
 
 footer{
     grid-area: F;
+    background: sienna;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
 }
+
+
