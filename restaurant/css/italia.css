@@ -1,34 +1,32 @@
-:root{
-    --text-primary: #f5f5dc; 
-    --text-secondary: #a8a878; 
-    --bg-primary: #333333; 
-    --bg-secondary: #555555; 
-    --nyans-gold: #FFD700;
-    --nyans-red: #B80F0A; 
-    --font-primary: 'Trajan Pro', serif; 
-    --font-secondary: 'Times New Roman', serif; 
-  }
-
-
-
-  body {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    font-family: var(--font-secondary), serif;
-    margin: 0; 
-    padding: 0; 
-  }
-
-.nav{
-grid-area: N;
+:root {
+  --text-primary: #f5f5dc;
+  --text-secondary: #a8a878;
+  --bg-primary: #333333;
+  --bg-secondary: #555555;
+  --nyans-gold: #ffd700;
+  --nyans-red: #b80f0a;
+  --font-primary: "Trajan Pro", serif;
+  --font-secondary: "Times New Roman", serif;
 }
 
- 
-   .container {
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-secondary), serif;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .nav {
+    grid-area: N;
+  }
+
+  .container {
     display: grid;
-    width: 90%; 
-    max-width: 1200px; 
-    margin: 20px; 
+    width: 90%;
+    max-width: 600px;
+    margin: 20px;
     grid-template-areas:
       "N N N N"
       "M M M M"
@@ -36,82 +34,434 @@ grid-area: N;
       "A A P P"
       "F F F F";
     gap: 15px;
-   }
+  }
 
-article{
+  article {
     border: black solid thin;
     width: 100%;
     height: 100%;
     display: block;
     margin: 10px;
-}
+  }
 
-section{
+  section {
     border: black solid thin;
     width: 100%;
     height: 100%;
     display: block;
     margin: 10px;
-}
+  }
 
-#menu{
+  #menu {
     display: grid;
     grid-area: M;
-    grid-template-areas: 
-    "a a a a"
-    "b b b b"
-    "c c c c"
-    "d d d d"
-    "e e e e";
-}
-.menu-item{
+    grid-template-areas:
+      "m m m m"
+      "a a a a"
+      "b b b b"
+      "c c c c"
+      "d d d d"
+      "e e e e";
+  }
+  #meny {
+    grid-area: m;
+  }
 
-}
-
-
-
-#caesar{
+  #caesar {
     grid-area: a;
-}
-#elefantsoppa{
+    padding: 10px;
+  }
+  #elefantsoppa {
     grid-area: b;
-}
-#senat{
+    padding: 10px;
+  }
+  #senat {
     grid-area: c;
-}
-#armenia{
+    padding: 10px;
+  }
+  #armenia {
     grid-area: d;
-}
-#nektar{
+    padding: 10px;
+  }
+  #nektar {
     grid-area: e;
-}
+    padding: 10px;
+  }
 
-
-#about{
+  #about {
     grid-area: A;
     background: fuchsia;
     width: 100%;
     height: 100%;
     display: block;
     margin: 10px;
-}
+  }
 
-#partner{
+  #partner {
     grid-area: P;
     background: darkkhaki;
     width: 100%;
     height: 100%;
     display: block;
     margin: 10px;
-}
+  }
 
-footer{
+  footer {
     grid-area: F;
     background: sienna;
     width: 100%;
     height: 100%;
     display: block;
     margin: 10px;
+  }
 }
 
+@media screen and (max-width: 960px) {
+  .nav {
+    grid-area: N;
+  }
 
+  .container {
+    display: grid;
+    width: 90%;
+    max-width: 960px;
+    margin: 20px;
+    grid-template-areas:
+      "N N N N"
+      "M M M M"
+      "M M M M"
+      "A A P P"
+      "F F F F";
+    gap: 15px;
+  }
+
+  article {
+    border: black solid thin;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+  }
+
+  section {
+    border: black solid thin;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+  }
+
+  #menu {
+    display: grid;
+    grid-area: M;
+    grid-template-areas:
+      "a a a a"
+      "b b b b"
+      "c c c c"
+      "d d d d"
+      "e e e e";
+  }
+  .menu-item {
+  }
+
+  #caesar {
+    grid-area: a;
+    padding: 10px;
+  }
+  #elefantsoppa {
+    grid-area: b;
+    padding: 10px;
+  }
+  #senat {
+    grid-area: c;
+    padding: 10px;
+  }
+  #armenia {
+    grid-area: d;
+    padding: 10px;
+  }
+  #nektar {
+    grid-area: e;
+    padding: 10px;
+  }
+
+  #about {
+    grid-area: A;
+    background: fuchsia;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+  }
+
+  #partner {
+    grid-area: P;
+    background: darkkhaki;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+  }
+
+  footer {
+    grid-area: F;
+    background: sienna;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .nav {
+    grid-area: N;
+  }
+
+  .container {
+    display: grid;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px;
+    grid-template-areas:
+      "N N N N"
+      "M M M M"
+      "M M M M"
+      "A A P P"
+      "F F F F";
+    gap: 15px;
+  }
+
+  article {
+    border: black solid thin;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+  }
+
+  section {
+    border: black solid thin;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+  }
+
+  #menu {
+    display: grid;
+    grid-area: M;
+    grid-template-areas:
+      "a a a a"
+      "b b b b"
+      "c c c c"
+      "d d d d"
+      "e e e e";
+  }
+  .menu-item {
+  }
+
+  #caesar {
+    grid-area: a;
+    padding: 10px;
+  }
+  #elefantsoppa {
+    grid-area: b;
+    padding: 10px;
+  }
+  #senat {
+    grid-area: c;
+    padding: 10px;
+  }
+  #armenia {
+    grid-area: d;
+    padding: 10px;
+  }
+  #nektar {
+    grid-area: e;
+    padding: 10px;
+  }
+
+  #about {
+    grid-area: A;
+    background: fuchsia;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+  }
+
+  #partner {
+    grid-area: P;
+    background: darkkhaki;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+  }
+
+  footer {
+    grid-area: F;
+    background: sienna;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+  }
+}
+
+/* :root {
+    --text-primary: #f5f5dc;
+    --text-secondary: #a8a878;
+    --bg-primary: #333333;
+    --bg-secondary: #555555;
+    --nyans-gold: #ffd700;
+    --nyans-red: #b80f0a;
+    --font-primary: "Trajan Pro", serif;
+    --font-secondary: "Times New Roman", serif;
+  }
+  
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-secondary), serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: grid;
+    width: 90%;
+    margin: 20px auto;
+    gap: 15px;
+  }
+  
+  .nav {
+    grid-area: N;
+  }
+  
+  #menu {
+    grid-area: M;
+  }
+  
+  #about {
+    grid-area: A;
+  }
+  
+  #partner {
+    grid-area: P;
+  }
+  
+  footer {
+    grid-area: F;
+  }
+  
+  article,
+  section {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+  }
+  
+  .menu-item {
+    padding: 10px; /* Added some default padding for menu items */
+  }
+  
+  /* Layout for smaller screens (max-width: 600px) */
+  @media screen and (max-width: 600px) {
+    .container {
+      max-width: 600px;
+      grid-template-areas:
+        "N"
+        "M"
+        "A"
+        "P"
+        "F";
+    }
+  
+    #menu {
+      display: grid;
+      grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e";
+    }
+  
+    article,
+    section {
+      border: black solid thin;
+    }
+  }
+  
+  /* Layout for medium screens (min-width: 601px and max-width: 960px) */
+  @media screen and (min-width: 601px) and (max-width: 960px) {
+    .container {
+      max-width: 960px;
+      grid-template-areas:
+        "N N"
+        "M M"
+        "A P"
+        "F F";
+    }
+  
+    #menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two columns for menu items */
+      grid-template-areas:
+        "a b"
+        "c d"
+        "e ."; /* Empty cell if only 5 items */
+    }
+  
+    article,
+    section {
+      border: black solid thin;
+    }
+  }
+  
+  /* Layout for larger screens (min-width: 961px and max-width: 1360px) */
+  @media screen and (min-width: 961px) and (max-width: 1360px) {
+    .container {
+      max-width: 1200px;
+      grid-template-areas:
+        "N N N N"
+        "M M . ."
+        "A A P P"
+        "F F F F";
+    }
+  
+    #menu {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Four columns for menu items */
+      grid-template-areas:
+        "a b c d"
+        "e . . .";
+    }
+  
+    article,
+    section {
+      border: black solid thin;
+    }
+  }
+  
+  /* Default layout for even larger screens (above 1360px) */
+  @media screen and (min-width: 1361px) {
+    .container {
+      max-width: 1400px; /* Example for larger screens */
+      grid-template-areas:
+        "N N N N N N"
+        "M M M . . ."
+        "A A P P . ."
+        "F F F F F F";
+    }
+  
+    #menu {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* Five columns for menu items */
+      grid-template-areas:
+        "a b c d e";
+    }
+  } */
