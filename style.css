@@ -1,70 +1,53 @@
-:root{
-  font-size: 16px;
-
-  --text-prim: #b6b6b6;
-  --text-sec: #ececec;
-  --bg-prim: #23232e;
-  --bg-sec: #141418;
-}
-
-
-
-/* Head */
-
-* {
-    box-sizing: border-box;
-    
-}
-.logo{
-
-}
-header{
+/* :root {
+    --text-primary: #f5f5dc;
+    --text-secondary: #a8a878;
+    --bg-primary: #333333;
+    --bg-secondary: #555555;
+    --nyans-gold: #ffd700;
+    --nyans-red: #b80f0a;
+    --font-primary: "Trajan Pro", serif;
+    --font-secondary: "Times New Roman", serif;
+  }
   
-}
-.menu{
-
-}
-
-/* Body */
-
-body{
-  width: 1200px;
-  background-color: var(--text-prim);
-}
-section{
-
-}
-
-#menu{
-
-}
-.menuitem{
-  border: 30px white thick;
-  padding: 40px;
-  margin: 20px;
-}
-
-
-@media  screen and (min-width:400px) {
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-secondary), serif;
+    margin: 0;
+    padding: 0;
+  }
   
-}
-
-@media  screen and (min-width:600px) {
+  .container {
+    display: grid;
+    width: 90%;
+    margin: 20px auto;
+    gap: 15px;
+  }
   
-}
-
-@media  screen and (min-width:800px) {
+  .nav {
+    grid-area: N;
+  }
   
-}
-
-@media  screen and (min-width:1000px) {
+  #menu {
+    grid-area: M;
+  }
   
-}
-
-@media  screen and (min-width:1200px) {
+  #about {
+    grid-area: A;
+  }
   
-}
-
-@media  screen and (min-width:1600px) {
+  #partner {
+    grid-area: P;
+  }
   
-}
+  footer {
+    grid-area: F;
+  }
+  
+  article,
+  section {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 10px;
+  }
