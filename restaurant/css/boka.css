@@ -1,15 +1,13 @@
 :root {
   --text-primary: #f5f5dc;
   --text-secondary: #a8a878;
-  --bg-primary: #333333;
+  --bg-primary: #f73434;
   --bg-secondary: #555555;
   --nyans-gold: #ffd700;
   --nyans-red: #b80f0a;
   --font-primary: "Trajan Pro", serif;
   --font-secondary: "Times New Roman", serif;
 }
-
-_____________________________________________________________ Logga och Mörk/Ljus _____________________________________________________________
 
 #lightlogo {
   display: none;
@@ -37,8 +35,6 @@ _____________________________________________________________ Logga och Mörk/Lj
 #darkmode img {
   width: 24px;
 }
-
-_____________________________________________________________ Enkla defintioner _____________________________________________________________
 
 body {
   background-color: var(--bg-primary);
