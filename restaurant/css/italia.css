@@ -1,18 +1,27 @@
 :root {
-  --text-primary: #f5f5dc;
-  --text-secondary: #a8a878;
   --bg-primary: #333333;
   --bg-secondary: #555555;
+  --text-primary: #f5f5dc;
+  --text-secondary: #a8a878;
   --nyans-gold: #ffd700;
-  --nyans-red: #b80f0a;
-  --font-primary: "Trajan Pro", serif;
-  --font-secondary: "Times New Roman", serif;
+  --nyans-lila: #52426e;
 }
 
-_____________________________________________________________ Logga och Mörk/Ljus _____________________________________________________________
+body.light-theme {
+  --bg-primary: #eeeeee;
+  --bg-secondary: #cccccc;
+  --text-primary: #222222;
+  --text-secondary: #444444;
+  --nyans-gold: #a58500;
+  --nyans-red: #8b0000;
+}
 
 #lightlogo {
   display: none;
+}
+
+#darklogo {
+  display: inline;
 }
 
 #lightmode {
@@ -38,8 +47,6 @@ _____________________________________________________________ Logga och Mörk/Lj
   width: 24px;
 }
 
-_____________________________________________________________ Enkla defintioner _____________________________________________________________
-
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -48,6 +55,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  transition: background 0.3s, color 0.3s;
   min-height: 100vh; /*100% av sidan*/
 }
 
@@ -65,8 +73,6 @@ a {
 a:hover {
   color: var(--nyans-gold);
 }
-
-_____________________________________________________________ Nav _____________________________________________________________
 
 header {
   text-align: center;
@@ -109,8 +115,6 @@ nav ul li a:hover {
   color: var(--nyans-gold);
 }
 
-_____________________________________________________________ Meny _____________________________________________________________
-
 .container {
   width: 95%;
   max-width: 1400px;
@@ -132,6 +136,7 @@ _____________________________________________________________ Meny _____________
 }
 
 .menu-item {
+  display: flex;
   margin-bottom: 30px;
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.1);
@@ -158,12 +163,22 @@ _____________________________________________________________ Meny _____________
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.structure {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+
+
 .price {
   font-size: 1.2em;
   font-weight: bold;
   color: var(--nyans-red);
   margin-top: 10px;
 }
+
+
 
 #about, #partner {
   padding: 20px;
@@ -187,6 +202,12 @@ _____________________________________________________________ Meny _____________
   text-align: justify;
 }
 
+#partner img {
+  display: block;
+  /* JOBBA HÄR */
+  /* display: none; */
+}
+
 #partner ul {
   list-style: none;
   padding: 0;
@@ -207,3 +228,37 @@ _____________________________________________________________ Meny _____________
   color: var(--nyans-gold);
 }
 
+footer p{
+  text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu-item {
+    padding: 10px;
+  }
+
+  .menu-item img {
+    max-width: 80%;
+  }
+
+  #menu h2, #about h2, #partner h2 {
+    font-size: 1.8em;
+  }
+
+  header .logo-container {
+    flex-direction: column;
+  }
+
+  header .logo-container img {
+    max-height: 70px;
+    margin: 5px 0;
+  }
+}

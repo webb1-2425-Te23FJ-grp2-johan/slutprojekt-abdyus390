@@ -1,0 +1,17 @@
+:root {
+  --bg-primary: #121212;
+  --text-primary: #ffffff;
+  --accent-gold: #ffd700;
+}
+
+body.light-theme {
+  --bg-primary: #ffffff;
+  --text-primary: #000000;
+  --accent-gold: #a58500;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.3s, color 0.3s;
+}
