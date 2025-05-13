@@ -1,13 +1,11 @@
 :root {
-  --bg-primary: #121212;
+  --bg-primary: #e20000;
   --text-primary: #ffffff;
-  --accent-gold: #ffd700;
 }
 
 body.light-theme {
-  --bg-primary: #ffffff;
+  --bg-primary: #b0a7ff;
   --text-primary: #000000;
-  --accent-gold: #a58500;
 }
 
 body {

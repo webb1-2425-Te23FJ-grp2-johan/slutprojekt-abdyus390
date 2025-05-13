@@ -12,7 +12,7 @@ body.light-theme {
   --bg-secondary: #cccccc;
   --text-primary: #222222;
   --text-secondary: #444444;
-  --nyans-gold: #a58500;
+  --nyans-gold: #7A0024;
   --nyans-red: #8b0000;
 }
 
@@ -202,10 +202,18 @@ nav ul li a:hover {
   text-align: justify;
 }
 
+#partner p{
+  text-align: center;
+}
+
 #partner img {
   display: block;
   /* JOBBA HÄR */
   /* display: none; */
+}
+
+.rome{
+  padding: 15px;
 }
 
 #partner ul {
@@ -217,16 +225,15 @@ nav ul li a:hover {
 
 #partner ul li {
   margin-bottom: 10px;
-  padding-left: 25px;
-  position: relative;
+  padding: 25px;
+  /* position: relative; */
 }
 
-#partner ul li::before {
-  content: "•";
+/* #partner ul li::before {
   position: absolute;
   left: 0;
   color: var(--nyans-gold);
-}
+} */
 
 footer p{
   text-align: center;
