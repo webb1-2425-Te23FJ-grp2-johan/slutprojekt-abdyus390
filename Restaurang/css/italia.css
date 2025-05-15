@@ -1,3 +1,8 @@
+/* ___________________________________________________Enkla definitioner___________________________________________________ */
+*{
+  box-sizing: border-box;
+}
+
 :root {
   --bg-primary: #333333;
   --bg-secondary: #555555;
@@ -16,6 +21,8 @@ body.light-theme {
   --nyans-red: #8b0000;
 }
 
+/* ___________________________________________________Logga___________________________________________________ */
+
 #lightlogo {
   display: none;
 }
@@ -24,28 +31,7 @@ body.light-theme {
   display: inline;
 }
 
-#lightmode {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-#lightmode img {
-  width: 24px;
-}
-
-#darkmode {
-  display: none;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-#darkmode img {
-  width: 24px;
-}
+/* ___________________________________________________Enkel standardkod___________________________________________________ */
 
 body {
   background-color: var(--bg-primary);
@@ -73,6 +59,9 @@ a {
 a:hover {
   color: var(--nyans-gold);
 }
+
+
+/* ___________________________________________________Navigation___________________________________________________ */
 
 header {
   text-align: center;
@@ -114,6 +103,25 @@ nav ul li a {
 nav ul li a:hover {
   color: var(--nyans-gold);
 }
+
+/* ___________________________________________________Ljus/Mörk knapp___________________________________________________ */
+
+#lightmode {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+#darkmode {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* ___________________________________________________Container och Meny___________________________________________________ */
 
 .container {
   width: 95%;
@@ -178,7 +186,7 @@ nav ul li a:hover {
   margin-top: 10px;
 }
 
-
+/* ___________________________________________________About, Partner och Boka___________________________________________________ */
 
 #about, #partner {
   padding: 20px;
@@ -202,14 +210,25 @@ nav ul li a:hover {
   text-align: justify;
 }
 
-#partner p{
+#partner ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
-#partner img {
-  display: block;
-  /* JOBBA HÄR */
-  /* display: none; */
+#partner ul li img {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+#boka{
+  display: flex;
+}
+
+iframe{
+  border-radius: 15px;
 }
 
 .rome{
@@ -223,17 +242,6 @@ nav ul li a:hover {
   max-width: 400px;
 }
 
-#partner ul li {
-  margin-bottom: 10px;
-  padding: 25px;
-  /* position: relative; */
-}
-
-/* #partner ul li::before {
-  position: absolute;
-  left: 0;
-  color: var(--nyans-gold);
-} */
 
 footer p{
   text-align: center;
@@ -249,23 +257,11 @@ footer p{
   }
 
   .menu-item {
-    padding: 10px;
-  }
-
-  .menu-item img {
-    max-width: 80%;
-  }
-
-  #menu h2, #about h2, #partner h2 {
-    font-size: 1.8em;
-  }
-
-  header .logo-container {
     flex-direction: column;
   }
 
-  header .logo-container img {
-    max-height: 70px;
-    margin: 5px 0;
+  .structure {
+    flex-direction: column;
+    text-align: center;
   }
 }
