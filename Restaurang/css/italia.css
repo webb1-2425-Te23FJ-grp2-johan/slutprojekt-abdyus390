@@ -1,267 +1,334 @@
-/* ___________________________________________________Enkla definitioner___________________________________________________ */
-*{
-  box-sizing: border-box;
+/* Enkla definitioner */
+* {
+    box-sizing: border-box;
 }
 
 :root {
-  --bg-primary: #333333;
-  --bg-secondary: #555555;
-  --text-primary: #f5f5dc;
-  --text-secondary: #a8a878;
-  --nyans-gold: #ffd700;
-  --nyans-lila: #52426e;
+    --bg-primary: #333333;
+    --bg-secondary: #555555;
+    --text-primary: #f5f5dc;
+    --text-secondary: #a8a878;
+    --nyans-gold: #ffd700;
+    --nyans-lila: #52426e;
 }
 
 body.light-theme {
-  --bg-primary: #eeeeee;
-  --bg-secondary: #cccccc;
-  --text-primary: #222222;
-  --text-secondary: #444444;
-  --nyans-gold: #7A0024;
-  --nyans-red: #8b0000;
+    --bg-primary: #eeeeee;
+    --bg-secondary: #cccccc;
+    --text-primary: #222222;
+    --text-secondary: #444444;
+    --nyans-gold: #7A0024;
+    --nyans-red: #8b0000;
 }
 
-/* ___________________________________________________Logga___________________________________________________ */
+/* Logga */
 
 #lightlogo {
-  display: none;
+    display: none;
 }
 
 #darklogo {
-  display: inline;
+    display: inline;
 }
 
-/* ___________________________________________________Enkel standardkod___________________________________________________ */
+/* Enkel standardkod */
 
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: var(--font-secondary), serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  transition: background 0.3s, color 0.3s;
-  min-height: 100vh; /*100% av sidan*/
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-secondary), serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s, color 0.3s;
+    min-height: 100vh;
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 a {
-  color: var(--text-primary);
-  text-decoration: none;
+    color: var(--text-primary);
+    text-decoration: none;
 }
 
 a:hover {
-  color: var(--nyans-gold);
+    color: var(--nyans-gold);
 }
 
 
-/* ___________________________________________________Navigation___________________________________________________ */
+/* Navigation */
 
 header {
-  text-align: center;
-  padding: 20px 0;
+    text-align: center;
+    padding: 20px 0;
 }
 
 header .logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 header .logo-container img {
-  max-height: 100px;
-  margin: 0 10px;
+    max-height: 100px;
+    margin: 0 10px;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 nav ul li {
-  display: inline-block;
+    display: inline-block;
 }
 
 nav ul li a {
-  color: var(--text-primary);
-  text-decoration: none;
-  font-size: 1.1em;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.1em;
 }
 
 nav ul li a:hover {
-  color: var(--nyans-gold);
+    color: var(--nyans-gold);
 }
 
-/* ___________________________________________________Ljus/Mörk knapp___________________________________________________ */
+#lightmenu{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: none;
+}
+
+#darkmenu{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Ljus/Mörk knapp */
 
 #lightmode {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 #darkmode {
-  display: none;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+    display: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
-/* ___________________________________________________Container och Meny___________________________________________________ */
+/* Container och Meny */
 
 .container {
-  width: 95%;
-  max-width: 1400px;
-  margin: 20px auto;
-  flex-grow: 1;
+    width: 95%;
+    max-width: 1400px;
+    margin: 20px auto;
+    flex-grow: 1;
 }
 
 #menu {
-  padding: 20px;
-  text-align: center;
+    padding: 20px;
+    text-align: center;
 }
 
 #menu h2 {
-  font-family: var(--font-primary);
-  font-size: 2.5em;
-  color: var(--nyans-gold);
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: var(--font-primary);
+    font-size: 2.5em;
+    color: var(--nyans-gold);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .menu-item {
-  display: flex;
-  margin-bottom: 30px;
-  padding: 15px;
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  text-align: center;
+    display: flex;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .menu-item h3 {
-  font-size: 1.5em;
-  color: var(--nyans-gold);
-  margin-top: 10px;
-  font-family: var(--font-primary);
+    font-size: 1.5em;
+    color: var(--nyans-gold);
+    margin-top: 10px;
+    font-family: var(--font-primary);
 }
 
 .menu-item p {
-  margin: 10px 0;
-  line-height: 1.6;
+    margin: 10px 0;
+    line-height: 1.6;
 }
 
 .menu-item img {
-  border-radius: 8px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .structure {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
 }
 
 
 .price {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: var(--nyans-red);
-  margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--nyans-red);
+    margin-top: 10px;
 }
 
-/* ___________________________________________________About, Partner och Boka___________________________________________________ */
+/* About, Partner och Boka */
 
-#about, #partner {
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+#about,
+#partner {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-#about h2, #partner h2 {
-  font-size: 2em;
-  color: var(--nyans-gold);
-  margin-bottom: 20px;
-  font-family: var(--font-primary);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  text-align: center;
+#about h2,
+#partner h2 {
+    font-size: 2em;
+    color: var(--nyans-gold);
+    margin-bottom: 20px;
+    font-family: var(--font-primary);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 #about p {
-  line-height: 1.7;
-  text-align: justify;
+    line-height: 1.7;
+    text-align: justify;
 }
 
 #partner ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
 #partner ul li img {
-  max-width: 100px;
-  margin-bottom: 10px;
+    max-width: 100px;
+    margin-bottom: 10px;
 }
 
-#boka{
-  display: flex;
+#boka {
+    display: flex;
+    justify-content: space-between;
 }
 
-iframe{
-  border-radius: 15px;
+#bokat {
+    background-color: var(--bg-secondary);
+    border: solid thick var(--nyans-gold);
+    padding: 25px;
+    display: none;
 }
 
-.rome{
-  padding: 15px;
+iframe {
+    border-radius: 15px;
+}
+
+.rome {
+    padding: 15px;
 }
 
 #partner ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 400px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px;
 }
 
 
-footer p{
-  text-align: center;
-}
-
-
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .menu-item {
-    flex-direction: column;
-  }
-
-  .structure {
-    flex-direction: column;
+footer p {
     text-align: center;
-  }
+}
+
+/* Resposiv Design */
+
+@media (max-width: 400px) {
+    #big{
+        display: none;
+    }
+}
+    
+
+@media (max-width: 680px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu-item {
+        flex-direction: column;
+    }
+
+    .structure {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (min-width: 2000px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #meny {
+      grid-area: M;
+    }
+    #caesar{
+      grid-area: A;
+    }
+    #elefantsoppa{
+      grid-area: B;
+    }
+    #senat{
+      grid-area: C;
+    }
+    #armenia{
+      grid-area: D;
+    }
+    #nektar{
+      grid-area: E;
+    }
+    #menu{
+      display: grid;
+      grid-template-areas: 
+      "M M M M"
+      "A A A A"
+      "B B C C"
+      "D D E E";
+      gap: 20px;
+    }
 }

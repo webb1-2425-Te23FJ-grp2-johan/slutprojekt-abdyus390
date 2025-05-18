@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurang SPQR</title>
     <link rel="stylesheet" href="css/italia.css">
-    
 </head>
 
 <body>
@@ -18,19 +17,45 @@
                     <img id="lightlogo" src="img/logos/SPQR_emblem.webp" alt="Restaurang SPQR Logotyp (Ljus Bakgrund)">
                 </a>
             </div>
-            <nav>
+            <section id="hamburger">
+                <button id="darkmenu">
+                    <img src="img/icons/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                </button>
+                <button id=" lightmenu">
+                    <img src="img/icons/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                </button>
+            </section>
+            <nav id="small">
                 <ul>
-                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#menu">Meny</a></li>
                     <li><a href="about.html">Om Oss</a></li>
                     <li><a href="boka.html">Boka Bord</a></li>
                     <li><a href="partner.html">Våra Partners</a></li>
                 </ul>
-                <button id="lightmode">
-                    <img src="img/icons/light_mode_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="">
-                </button>
-                <button id="darkmode">
-                    <img src="img/icons/dark_mode_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="">
-                </button>
+                <div>
+                    <button id="lightmode">
+                        <img src="img/icons/light_mode_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Ljusläge">
+                    </button>
+                    <button id="darkmode">
+                        <img src="img/icons/dark_mode_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="Mörkläge">
+                    </button>
+                </div>
+            </nav>
+            <nav id="big">
+                <ul>
+                    <li><a href="#menu">Meny</a></li>
+                    <li><a href="about.html">Om Oss</a></li>
+                    <li><a href="boka.html">Boka Bord</a></li>
+                    <li><a href="partner.html">Våra Partners</a></li>
+                </ul>
+                <div>
+                    <button id="lightmode">
+                        <img src="img/icons/light_mode_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Ljusläge">
+                    </button>
+                    <button id="darkmode">
+                        <img src="img/icons/dark_mode_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="Mörkläge">
+                    </button>
+                </div>
             </nav>
         </header>
 
@@ -38,6 +63,7 @@
             <h2 id="meny">Meny</h2>
             <article id="caesar" class="menu-item">
                 <div class="structure">
+                    <h3 id="rabatt">RABATT</h3>
                     <div class="block1">
                         <img src="img/meny/caesarpasta 130px.webp" alt="Pasta med Julius Caesar">
                     </div>
@@ -68,8 +94,7 @@
                     <div class="block2">
                         <h3>Senatens Favorit</h3>
                         <p>Innehåller saftigt lamm, oliver, rosmarin, vitlök och en skvätt vinäger, allt tillagat med
-                            romerska
-                            kryddor.</p>
+                            romerska kryddor.</p>
                         <p>12 999 kr</p>
                     </div>
                 </div>
@@ -95,19 +120,16 @@
                     <div class="block2">
                         <h3>Impirisk Nektar</h3>
                         <p>En lyxig dessert som består av en honungs- och mandelkräm smaksatt med rosenvatten, saffran
-                            och
-                            citronzest, serverad på en saftig mandelkaka.</p>
+                            och citronzest, serverad på en saftig mandelkaka.</p>
                         <p>9999 kr</p>
                     </div>
                 </div>
             </article>
         </section>
 
-            <section class="rome">
-        <img src="img/rom-2040.webp" alt="Romarriket">
-    </section>
-
-
+        <section class="rome">
+            <img src="img/rom-2040.webp" alt="Romarriket">
+        </section>
     </section>
 
     <footer>
