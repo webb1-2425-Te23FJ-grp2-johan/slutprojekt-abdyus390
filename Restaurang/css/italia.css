@@ -120,7 +120,11 @@ nav ul li a:hover {
 }
 
 #small{
+    display: none;
+}
 
+#hamburger{
+    display: none;
 }
 
 /* Ljus/Mörk knapp */
@@ -285,14 +289,14 @@ footer p {
 
 /* Resposiv Design */
 
-@media (max-width: 400px) {
+@media (max-width: 680px) {
     #big{
         display: none;
     }
 }
     
 
-@media (max-width: 680px) {
+@media (max-width: 1199px) {
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -307,9 +311,38 @@ footer p {
         flex-direction: column;
         text-align: center;
     }
+
+    #meny {
+      grid-area: M;
+    }
+    #caesar{
+      grid-area: A;
+    }
+    #elefantsoppa{
+      grid-area: B;
+    }
+    #senat{
+      grid-area: C;
+    }
+    #armenia{
+      grid-area: D;
+    }
+    #nektar{
+      grid-area: E;
+    }
+    #menu{
+      display: grid;
+      grid-template-areas: 
+      "M M M M"
+      "A A A A"
+      "B B C C"
+      "D D D D"
+      "E E E E";
+      gap: 20px;
+    }
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1200px) {
     header {
         display: flex;
         justify-content: space-between;
