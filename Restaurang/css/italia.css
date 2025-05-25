@@ -1,4 +1,5 @@
-/* Enkla definitioner */
+/* ------------------------------VARIABLER OCH SÅNT------------------------------ */
+
 * {
     box-sizing: border-box;
 }
@@ -9,7 +10,7 @@
     --text-primary: #f5f5dc;
     --text-secondary: #a8a878;
     --nyans-gold: #ffd700;
-    --nyans-lila: #52426e;
+    --nyans-regular: #52426e;
 }
 
 body.light-theme {
@@ -18,20 +19,22 @@ body.light-theme {
     --text-primary: #222222;
     --text-secondary: #444444;
     --nyans-gold: #7A0024;
-    --nyans-red: #8b0000;
+    --nyans-regular: #8b0000;
 }
 
-/* Logga */
+/* ------------------------------LOGGA------------------------------ */
 
 #lightlogo {
     display: none;
+    border-radius: 5px;
 }
 
 #darklogo {
     display: inline;
+    border-radius: 5px;
 }
 
-/* Enkel standardkod */
+/* ------------------------------ENKLA DEFINITIONER------------------------------ */
 
 body {
     background-color: var(--bg-primary);
@@ -60,12 +63,16 @@ a:hover {
     color: var(--nyans-gold);
 }
 
-
-/* Navigation */
+/* ------------------------------NAVIGATION------------------------------ */
 
 header {
     text-align: center;
     padding: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 header .logo-container {
@@ -80,7 +87,7 @@ header .logo-container img {
     margin: 0 10px;
 }
 
-nav ul {
+#big ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -90,44 +97,128 @@ nav ul {
     gap: 15px;
 }
 
-nav ul li {
+#big ul li {
     display: inline-block;
 }
 
-nav ul li a {
+#big ul li a {
     color: var(--text-primary);
     text-decoration: none;
     font-size: 1.1em;
 }
 
-nav ul li a:hover {
+#big ul li a:hover {
     color: var(--nyans-gold);
 }
 
-#lightmenu{
-    background: none;
-    border: none;
-    padding: 0;
+#burger-menu {
     cursor: pointer;
+    height: 27px;
+    width: 27px;
+    margin-right: 20px;
+    overflow: visible;
+    position: relative;
+    z-index: 3;
     display: none;
 }
 
-#darkmenu{
-    background: none;
-    border: none;
+#burger-menu span,
+#burger-menu span:before,
+#burger-menu span:after {
+    background: var(--text-primary);
+    display: block;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+}
+
+#burger-menu span:before,
+#burger-menu span:after {
+    content: '';
+}
+
+#burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 27px;
+}
+
+#burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 27px;
+}
+
+#burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 27px;
+}
+
+#burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+}
+
+#burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+}
+
+#burger-menu.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+}
+
+#small {
+    z-index: 2;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#small.overlay {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+}
+
+#small ul {
     padding: 0;
-    cursor: pointer;
+    list-style: none;
+    margin: 0;
 }
 
-#small{
-    display: none;
+#small li {
+    margin-bottom: 30px;
 }
 
-#hamburger{
-    display: none;
+#small a {
+    color: #fff;
+    display: block;
+    font-size: 32px;
+    text-decoration: none;
 }
 
-/* Ljus/Mörk knapp */
+/* ------------------------------LJUS/MÖRKLÄGE------------------------------ */
 
 .lightmode {
     display: inline;
@@ -145,7 +236,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Container och Meny */
+/* ------------------------------BODY FÖR ALLA HTML------------------------------ */
 
 .container {
     width: 95%;
@@ -158,7 +249,6 @@ nav ul li a:hover {
     padding: 20px;
     text-align: center;
 }
-
 
 #menu h2 {
     font-family: var(--font-primary);
@@ -201,22 +291,26 @@ nav ul li a:hover {
     align-items: center;
     gap: 20px;
     text-align: left;
+    width: 100%;
 }
 
 .block1 {
     display: block;
-    max-width: 100%;
+    max-width: 130px;
     height: auto;
+    flex-shrink: 0;
+}
+
+.block2 {
+    flex-grow: 1;
 }
 
 .price {
     font-size: 1.2em;
     font-weight: bold;
-    color: var(--nyans-red);
+    color: var(--nyans-regular);
     margin-top: 10px;
 }
-
-/* About, Partner och Boka */
 
 #about,
 #partner {
@@ -242,12 +336,34 @@ nav ul li a:hover {
     text-align: justify;
 }
 
+#about img{
+    display: block;
+    max-width: 100%;
+    height: 100%;
+}
+
+#partner ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 #partner ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 20px;
+    border: 1px solid var(--text-secondary);
+    border-radius: 8px;
+    background-color: var(--bg-secondary);
+    flex-basis: calc(50% - 20px);
+    max-width: 250px;
 }
 
 #partner ul li img {
@@ -255,9 +371,16 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
+#partner ul li a {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
 #boka {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 #bokat {
@@ -265,42 +388,132 @@ nav ul li a:hover {
     border: solid thick var(--nyans-gold);
     padding: 25px;
     display: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#bokning {
+    border: thick var(--nyans-regular) solid;
+    padding: 20px;
+    border-radius: 15px;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#bokning .input p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#bokning .input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--text-secondary);
+    border-radius: 5px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+#bokabtn {
+    background-color: var(--nyans-gold);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+#bokabtn:hover {
+    opacity: 0.9;
 }
 
 iframe {
     border-radius: 15px;
+    width: 100%;
+}
+
+#map {
+    border: thick var(--nyans-regular) solid;
+    border-radius: 15px;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
 }
 
 .rome {
     padding: 15px;
-}
-
-#partner ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 400px;
-}
-
-
-footer p {
     text-align: center;
 }
 
-/* Resposiv Design */
-
-@media (max-width: 680px) {
-    #big{
-        display: none;
-    }
+.rome img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
-    
+
+footer p {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* ------------------------------RESPONSIV DESIGN------------------------------ */
 
 @media (max-width: 1199px) {
-    nav ul {
+    header {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+    }
+    #big {
+        display: none;
+    }
+    #burger-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    header .logo-container {
+        margin-bottom: 0;
+    }
+
+    #meny {
+        grid-area: M;
+    }
+    #caesar {
+        grid-area: A;
+    }
+    #elefantsoppa {
+        grid-area: B;
+    }
+    #senat {
+        grid-area: C;
+    }
+    #armenia {
+        grid-area: D;
+    }
+    #nektar {
+        grid-area: E;
+    }
+    #menu {
+        display: grid;
+        grid-template-areas:
+            "M M M M"
+            "A A A A"
+            "B B C C"
+            "D D D D"
+            "E E E E";
+        gap: 20px;
     }
 
     .menu-item {
@@ -312,33 +525,31 @@ footer p {
         text-align: center;
     }
 
-    #meny {
-      grid-area: M;
+    #boka {
+        flex-direction: column;
+        align-items: stretch;
     }
-    #caesar{
-      grid-area: A;
+
+    #partner ul li {
+        flex-basis: calc(100% - 20px);
+        max-width: 400px;
     }
-    #elefantsoppa{
-      grid-area: B;
+}
+
+@media (max-width: 699px) {
+    #menu {
+        grid-template-areas:
+            "M M M M"
+            "A A A A"
+            "B B B B"
+            "C C C C"
+            "D D D D"
+            "E E E E";
     }
-    #senat{
-      grid-area: C;
-    }
-    #armenia{
-      grid-area: D;
-    }
-    #nektar{
-      grid-area: E;
-    }
-    #menu{
-      display: grid;
-      grid-template-areas: 
-      "M M M M"
-      "A A A A"
-      "B B C C"
-      "D D D D"
-      "E E E E";
-      gap: 20px;
+
+    #partner ul li {
+        flex-basis: calc(100% - 20px);
+        max-width: 100%;
     }
 }
 
@@ -346,33 +557,48 @@ footer p {
     header {
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
+    }
+    #burger-menu {
+        display: none;
+    }
+    #big {
+        display: flex;
+    }
+    #small {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    header .logo-container {
+        margin-bottom: 20px;
     }
 
     #meny {
-      grid-area: M;
+        grid-area: M;
     }
-    #caesar{
-      grid-area: A;
+    #caesar {
+        grid-area: A;
     }
-    #elefantsoppa{
-      grid-area: B;
+    #elefantsoppa {
+        grid-area: B;
     }
-    #senat{
-      grid-area: C;
+    #senat {
+        grid-area: C;
     }
-    #armenia{
-      grid-area: D;
+    #armenia {
+        grid-area: D;
     }
-    #nektar{
-      grid-area: E;
+    #nektar {
+        grid-area: E;
     }
-    #menu{
-      display: grid;
-      grid-template-areas: 
-      "M M M M"
-      "A A A A"
-      "B B C C"
-      "D D E E";
-      gap: 20px;
+    #menu {
+        display: grid;
+        grid-template-areas:
+            "M M M M"
+            "A A A A"
+            "B B C C"
+            "D D E E";
+        gap: 20px;
     }
 }
